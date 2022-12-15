@@ -1,0 +1,24 @@
+
+ watch -n 1 'ps -eo pid,ppid,nice'
+
+
+2.exe 15 3 3
+2.exe 15 2 5
+2.exe 4 2 5
+_____________
+3.exe 15 3 3 3 
+3.exe 15 3 1 5
+3.exe 4 3 1 5
+_____________
+linux: top -b
+sudo renice -17 6060
+max = +19 min = -20
+ps -ef | grep a.out // to see stoped a.out
+В ОДНОМ ОКНЕ
+ctr + z - остановить
+fg - возобновить
+bg - в бэкграунд
+jobs - список остановленных
+kill -9 pid - вообще убить
+kill - не совсем
+watch ps -l -p 3355
